@@ -18,7 +18,8 @@ public class Exercise1 {
                 .map( country -> country.getCities().stream().max(Comparator.comparing(City::getPopulation)))
                 .filter(Optional::isPresent)
                 .map(Optional::get)
-                  .collect(Collectors.toList());
+                .collect(Collectors.toList());
+                  
       highPopulatedCitiesOfCountries.forEach(System.out::println);
    }
 
